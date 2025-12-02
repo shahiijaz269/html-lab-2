@@ -1,0 +1,456 @@
+/* ========= STEP 1 – TYPOGRAPHY SYSTEM ========= */
+
+/* Headings */
+h1 {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+}
+
+h3 {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
+/* Paragraphs */
+p {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+  /* keep text slightly softer than pure white for dark background */
+  color: #e0e0e0;
+}
+
+/* =========================================
+   STEP 2 — INTERACTIVE ELEMENTS
+========================================= */
+
+/* Links (all <a> tags) */
+a {
+  color: #2563eb;                /* default blue */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: #3253b7;                /* darker blue on hover/focus */
+  text-decoration: underline;
+  
+}
+
+a:active {
+  color: #1e3a8a;                /* deepest blue when active (pressed) */
+}
+
+/* Primary buttons (Bootstrap + custom) */
+.btn,
+.btn-primary,
+.btn-outline-primary,
+.btn-get-started {
+  background: #6997ee;           /* default button color */
+  border-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 999px;          /* pill shape */
+  padding: 0.55rem 1.4rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.1s ease;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-outline-primary:hover,
+.btn-get-started:hover {
+  background: #3168f3;
+  border-color: #1d4ed8;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn:active,
+.btn-primary:active,
+.btn-outline-primary:active,
+.btn-get-started:active {
+  background: #1e3a8a;
+  border-color: #1e3a8a;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.45);
+  transform: translateY(0);
+}
+
+/* Keep focus visible for accessibility */
+.btn:focus-visible,
+a:focus-visible {
+  outline: 2px solid #f97316;   /* orange focus ring */
+  outline-offset: 3px;
+}
+/* ========= STEP 3 – SPACING & SURFACES ========= */
+
+/* Spacing scale */
+.space-sm { padding: 1rem !important; }
+.space-md { padding: 2rem !important; }
+.space-lg { padding: 3rem !important; }
+
+/* Surface card style for sections */
+.section-surface {
+  background-color: #242424 !important;   /* slightly lighter dark */
+  border: 1px solid #3a3a3a !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.45);
+  margin-bottom: 3rem;
+}
+/* ========= STEP 4 – COMPONENTS RESTYLED ========= */
+
+/* 1) SIDEBAR HEADER + NAV MENU */
+#header {
+  background: #121939;                      /* deep dark navy */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75);
+  border-right: 1px solid #9da2a7;
+}
+
+/* Logo text inside header */
+#header .logo a,
+#header .logo span {
+  color: #e5e7eb;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Nav links */
+#navmenu ul li a {
+  display: inline-block;
+  padding: 0.55rem 1.2rem;
+  margin-bottom: 0.35rem;
+  border-radius: 999px;                     /* pill shape */
+  color: #d1d5db;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.08s ease;
+}
+
+/* Hover / active states for nav links */
+#navmenu ul li a:hover,
+#navmenu ul li a:focus,
+#navmenu ul li .active,
+#navmenu ul li a.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+/* 2) BACK-TO-TOP BUTTON */
+.scroll-top {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    background 0.12s ease;
+}
+
+/* Hover effect for back-to-top */
+.scroll-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.9);
+}
+
+/* Pressed state */
+.scroll-top:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.85);
+}
+
+
+/* ========= STEP 5 – RESPONSIVE LAYOUTS ========= */
+/* Large screens */
+@media (min-width: 1200px) {
+  #header { width: 200px !important; }
+  #header ~ main { margin-left: 300px !important; }
+}
+
+/* Tablets / medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #header { width: 240px !important; }
+  #header ~ main { margin-left: 240px !important; }
+}
+
+/* Very small screens (phone) */
+@media (max-width: 767px) {
+  #header { width: 200px !important; }
+  #header ~ main { margin-left: 200px !important; }
+}
+
+
+/* === Always show sidebar, even on small / half-screen widths === */
+@media (max-width: 1199px) {
+  /* keep sidebar on-screen */
+  #header {
+    left: 0 !important;      /* override main.css that pushes it off-screen */
+    width: 50px !important; /* pick any width you like: 240, 260, 300… */
+  }
+
+  /* push content to the right so it doesn't sit under the sidebar */
+  #header ~ main {
+    margin-left: 300px !important;  /* must match the width above */
+  }
+
+  /* hide the round toggle button since the menu is always visible */
+  #header .header-toggle {
+    display: none !important;
+  }
+}
+
+
+/* ========= RESPONSIVE FOOTER ========= */
+
+/* General footer styling for dark mode */
+#footer {
+  background: #0d0d0d;
+  color: #e0e0e0;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+#footer h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+#footer p {
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+/* Social icons */
+#footer .social-links a {
+  font-size: 1.3rem;
+  color: #c9c9c9;
+  margin: 0 0.5rem;
+  transition: 0.2s;
+}
+
+#footer .social-links a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Make footer responsive */
+@media (max-width: 768px) {
+  #footer h3 {
+    font-size: 1.2rem;
+    text-align: right;
+  }
+  #footer p {
+    font-size: 0.95rem;
+  }
+  #footer .social-links {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+  }
+  #footer .social-links a {
+    font-size: 1.2rem;
+    margin: 0.3rem;
+  }
+}
+
+/* Extra small devices (phones < 480px) */
+@media (max-width: 480px) {
+  #footer {
+    padding: 2rem 0.7rem;
+  }
+  #footer h3 {
+    font-size: 1.25rem;
+  }
+  #footer p {
+    font-size: 0.9rem;
+  }
+  #footer .social-links a {
+    font-size: 1.15rem;
+  }
+}
+
+/* ========= OPTIONAL TASK – STYLED LISTS ========= */
+
+/* --- Unordered list (about-info-list) --- */
+.about-info-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1rem 0;
+}
+
+.about-info-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+/* custom bullet using pseudo-element */
+.about-info-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4fa3ff;     /* blue bullet */
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+
+
+/* --- Nested unordered list (about-learning-list) --- */
+.about-learning-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-learning-list > li {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.about-learning-list > li::before {
+  content: "▸";       /* arrow bullet */
+  position: absolute;
+  left: 0;
+  color: #3fa9ff;
+  font-size: 1.2rem;
+}
+
+/* nested ul inside */
+.about-learning-list ul {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.about-learning-list ul li::before {
+  content: "–";      /* dash bullet */
+  position: absolute;
+  left: -1rem;
+  color: #bbbbbb;
+}
+
+
+/* --- Ordered list (resume-goals-list) using counters --- */
+
+.resume-goals-list {
+  counter-reset: listCounter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.resume-goals-list li {
+  counter-increment: listCounter;
+  margin-bottom: 0.7rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.resume-goals-list li::before {
+  content: counter(listCounter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #4fa3ff;
+}
+
+/* ========= OPTIONAL TASK – TABLE / DATA BLOCKS ========= */
+
+/* Wrapper to allow horizontal scroll on very small screens */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Main table styling */
+.study-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 600px;              /* keeps table readable on small screens */
+}
+
+/* Header row */
+.study-table thead {
+  background: #2563eb;           /* bright blue header */
+  color: #ffffff;
+}
+
+.study-table th {
+  padding: 14px;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Body rows */
+.study-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #2e2e2e;
+  color: #e0e0e0;
+}
+
+/* Zebra striping */
+.study-table tbody tr:nth-child(odd) {
+  background: #1f1f1f;
+}
+.study-table tbody tr:nth-child(even) {
+  background: #262626;
+}
+
+/* Hover effect */
+.study-table tbody tr:hover {
+  background: #333333;
+  transition: 0.15s;
+}
+
+/* Right-align numbers in the last column */
+.study-table td:last-child {
+  text-align: left;
+  font-weight: 600;
+  color: #9ecbff;
+}
+
+
+
+
+
+
