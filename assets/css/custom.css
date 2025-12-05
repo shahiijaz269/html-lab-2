@@ -946,3 +946,25 @@ h3 {
 
 /* Phones (< 768px): use template’s default behavior (off-canvas menu),
    so we DON'T touch #header or main here. */
+
+   /* === FINAL OVERRIDE: sidebar icon + text sizes === */
+
+/* Whole pill (icon + text) */
+#header #navmenu ul li a {
+  font-size: 1.2rem !important;      /* base size for text */
+  padding: 0.35rem 0.8rem !important;
+  gap: 0.4rem !important;
+}
+
+/* Icons */
+#header #navmenu ul li a i.navicon {
+  font-size: 0.9rem !important;      /* icon size */
+}
+
+/* Text label: Home, About, Resume, ... */
+#header #navmenu ul li a span {
+  display: inline-block !important;
+  font-size: 1.2rem !important;      /* text size */
+  font-weight: 500;
+  white-space: nowrap;
+}
