@@ -857,24 +857,24 @@ h3 {
 
 /* Icon size inside nav */
 #navmenu ul li a i.navicon {
-  font-size: 1.1rem;      /* ⬅ change THIS to make icons bigger/smaller */
+  font-size: .5rem;      /* ⬅ change THIS to make icons bigger/smaller */
 }
 
 /* TEXT LABEL (Home, About, Resume, ...) */
 #navmenu ul li a span {
   display: inline-block !important;
-  font-size: 0.85rem;     /* ⬅ change THIS to control text size */
+  font-size: 0.3rem;     /* ⬅ change THIS to control text size */
 }
 
 /* Small phones */
 @media (max-width: 575px) {
   #navmenu ul li a {
     padding: 0.45rem 0.9rem;
-    font-size: 0.8rem;    /* base size for text on tiny screens */
+    font-size: 0.3rem;    /* base size for text on tiny screens */
   }
 
   #navmenu ul li a span {
-    font-size: 0.8rem;    /* match the base so it doesn't jump */
+    font-size: 0.3rem;    /* match the base so it doesn't jump */
   }
 }
 
