@@ -837,20 +837,47 @@ h3 {
   }
 }
 
-/* Nav links */
 #navmenu ul li a {
-  display: inline-block;
+  display: flex;                    /* icon and text in a row */
+  align-items: center;
+  gap: 0.55rem;
   padding: 0.55rem 1.2rem;
   margin-bottom: 0.35rem;
-  border-radius: 999px;                     /* pill shape */
+  border-radius: 999px;
   color: #d1d5db;
   font-weight: 500;
   letter-spacing: 0.04em;
+  text-decoration: none;
+  white-space: nowrap;
   transition:
     background-color 0.18s ease,
     color 0.18s ease,
     transform 0.08s ease;
 }
+
+/* Icon size inside nav */
+#navmenu ul li a i.navicon {
+  font-size: 1.1rem;      /* ⬅ change THIS to make icons bigger/smaller */
+}
+
+/* TEXT LABEL (Home, About, Resume, ...) */
+#navmenu ul li a span {
+  display: inline-block !important;
+  font-size: 0.85rem;     /* ⬅ change THIS to control text size */
+}
+
+/* Small phones */
+@media (max-width: 575px) {
+  #navmenu ul li a {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;    /* base size for text on tiny screens */
+  }
+
+  #navmenu ul li a span {
+    font-size: 0.8rem;    /* match the base so it doesn't jump */
+  }
+}
+
 
 
 /* ========= STEP 5 – RESPONSIVE LAYOUTS (SIMPLIFIED) ========= */
@@ -867,5 +894,55 @@ h3 {
   }
 }
 
-/* On screens smaller than 992px:
-   we let the original template handle everything (mobile nav). */
+/* ========= STEP 5 – RESPONSIVE LAYOUTS (clean version) ========= */
+
+/* Desktop: sidebar fixed and main content shifted right */
+@media (min-width: 1200px) {
+  #header {
+    left: 0;
+    width: 260px;
+  }
+  #header ~ main {
+    margin-left: 260px;
+  }
+}
+
+/* Tablets / medium screens: slightly smaller sidebar */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #header {
+    left: 0;
+    width: 220px;
+  }
+  #header ~ main {
+    margin-left: 220px;
+  }
+}
+
+/* Phones (< 768px): use template’s default behavior (off-canvas menu),
+   so we DON'T touch #header or main here. */
+/* ========= STEP 5 – RESPONSIVE LAYOUTS (clean version) ========= */
+
+/* Desktop: sidebar fixed and main content shifted right */
+@media (min-width: 1200px) {
+  #header {
+    left: 0;
+    width: 260px;
+  }
+  #header ~ main {
+    margin-left: 260px;
+  }
+}
+
+/* Tablets / medium screens: slightly smaller sidebar */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #header {
+    left: 0;
+    width: 220px;
+  }
+  #header ~ main {
+    margin-left: 220px;
+  }
+}
+
+/* Phones (< 768px): use template’s default behavior (off-canvas menu),
+   so we DON'T touch #header or main here. */
