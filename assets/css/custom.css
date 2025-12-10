@@ -968,3 +968,128 @@ h3 {
   font-weight: 500;
   white-space: nowrap;
 }
+
+/* ===== CONTACT FORM RESULTS ===== */
+#form-results {
+  background: #111827;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+#form-results p {
+  margin-bottom: 0.25rem;
+}
+
+/* average line */
+#form-average {
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+}
+
+/* ===== SUCCESS POPUP ===== */
+#form-popup {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #e5e7eb;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+#form-popup.show {
+  display: flex;
+}
+
+#form-popup i {
+  font-size: 1.1rem;
+}
+#contact-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Contact form validation styles --- */
+.field-error {
+  color: #f97373;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+
+input.is-invalid {
+  border-color: #f97373 !important;
+}
+
+input.is-valid {
+  border-color: #22c55e !important;
+}
+
+/* disabled submit button */
+#contact-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#form-results {
+  background: #2f3136;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  color: #f3f4f6;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+#form-results p {
+  margin-bottom: 0.25rem;
+}
+
+#form-average {
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+}
+
+/* error / success styles for inputs */
+.field-error {
+  color: #f97373;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+
+input.is-invalid {
+  border-color: #f97373 !important;
+}
+
+input.is-valid {
+  border-color: #22c55e !important;
+}
+
+/* results box under form */
+#form-results {
+  background: #2f3136;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  color: #f3f4f6;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+#form-results p {
+  margin-bottom: 0.25rem;
+}
+
+#form-average {
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+}
